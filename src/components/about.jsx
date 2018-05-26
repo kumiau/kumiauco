@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+
+const Section = styled.section`
+  color: ${props => props.theme.fontColor}
+`
 
 class About extends Component {
   render(){
     return (
-      <div className="container">
+      <Section className="container">
         <h1>Acerca de mí</h1>
         <p>
           <strong>La versión corta</strong>: Soy Santiago Restrepo, desarrollador web 
@@ -19,10 +23,30 @@ class About extends Component {
         </p>
         <p>
           Finalmente estoy familiarizado con marcos de trabajo colaborativo 
-          como SCRUM y Kanban. También manejo cómodamente el sistema de repositorio
-          git.
+          como SCRUM y Kanban. También trabajo cómodamente sobre el sistema de 
+          repositorio git.
         </p>
-      </div>
+        <p>
+          <strong>La versión larga</strong>: Oriundo de Pereira, Colombia pero actualmente
+          vivo en Bogotá. Estudié Ingeniería en Sistemas en la Universidad Tecnológica
+          de Pereira y desde la Universidad trabajo con tecnologías web. 
+        </p>
+        <p>
+          En Pereira fundé junto al diseñador Jorge Grajales el emprendimiento 
+          <strong>Activo Multimedia</strong> en el marco de cluster de tecnología
+          Parquesoft. desde el año 2006 hasta el 2008 hasta el 2013 enfocados en desarrollo 
+          de aplicativos web y multimedia.  Trabajé con un talentoso equipo lo que me 
+          dejó con muchas experiencias sobre diseño, accesibilidad y experiencia de usuario
+          además de cómo coordinar equipos y dirigir gestión de proyectos.
+        </p>
+        <p>
+          En el 2009 me vinculé a la agencia <a href="http://brandca.co">Brandca</a> donde
+          fui desarrollador lider y trabajamos en desarrollos de multiples sitios
+          comerciales enfocados en la plataforma Wordpress. A partir de ese momento
+          he trabajado de manera independiente como Freelance con la agencia
+          <a href="http://cien.plus">Cien +</a>.
+        </p>
+      </Section>
     )
   };
 }

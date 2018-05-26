@@ -4,26 +4,28 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './components/home';
 import About from './components/about';
+import Portfolio from './components/portfolio';
 import "typeface-oswald";
+import "typeface-slabo-27px";
+// import styled from 'styled-components';
 
-class Page extends Component { 
-  render () {
-    var title = this.props.title;
-    var sectionClass = title.replace(/\s+/g, '-').toLowerCase();;
-    return (
-      <section className={sectionClass}>
-        <div className="container">
-          <h1>{title}</h1>
-        </div>
-      </section>
-    )
-  }
-}
-
-
-const Settings = (props) => (
-  <Page title="Settings"/>
-);
+// const Section = styled.section`
+//   color: ${props => props.theme.fontColor}
+// `
+// 
+// class Page extends Component { 
+//   render () {
+//     var title = this.props.title;
+//     var sectionClass = title.replace(/\s+/g, '-').toLowerCase();;
+//     return (
+//       <Section className={sectionClass}>
+//         <div className="container">
+//           <h1>{title}</h1>
+//         </div>
+//       </Section>
+//     )
+//   }
+// }
 
 class App extends Component {
   render() {
@@ -31,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Home />
         <About />
-        <Settings />
+        <Portfolio />
       </div>
 //       <Router history={browserHistory}>
 //         <Route path="/" component={Home}/>
